@@ -13,8 +13,8 @@ mongoose
 	.then(() => {
 		console.log("✅ MongoDB connecté");
 		// Lancement du serveur après la connexion à la DB
-		app.listen(PORT, () =>
-			console.log(`🚀 Serveur démarré sur http://localhost:${PORT}`)
-		);
+		app.listen(PORT, () => {
+			console.log(`🚀 Serveur démarré sur le port ${PORT}`);
+		});
 	})
 	.catch((err) => console.error("❌ Erreur MongoDB :", err));
