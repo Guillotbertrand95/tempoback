@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 import dotenv from "dotenv";
 import app from "./app.js"; // Importe l'application Express depuis app.js
 
-dotenv.config();
+dotenv.config(); //dotenv
 
 const PORT = process.env.PORT || 5000;
 
