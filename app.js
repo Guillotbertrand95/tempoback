@@ -8,7 +8,14 @@ import activityRoutes from "./routes/ActivityRoutes.js";
 const app = express();
 
 // Middlewares globaux
-app.use(cors());
+app.use(
+	cors({
+		origin: "https://tempfront-self.vercel.app", // ton frontend Vercel
+		methods: ["GET", "POST", "PUT", "DELETE"],
+		credentials: true, // si tu veux envoyer cookies ou headers d’auth
+	})
+);
+
 app.use(morgan("dev"));
 app.use(express.json());
 
